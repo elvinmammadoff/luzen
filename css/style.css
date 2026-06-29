@@ -213,7 +213,7 @@ input, textarea, select { font-family: inherit; }
   font-family: var(--f-display);
   font-size: 2.5rem;
   font-weight: 400;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   color: var(--light);
   text-transform: uppercase;
   overflow: hidden;
@@ -224,6 +224,8 @@ input, textarea, select { font-family: inherit; }
   display: inline-block;
   transform: translateY(100%);
 }
+
+.preloader-e { color: var(--accent); }
 
 .preloader-bar {
   width: 120px;
