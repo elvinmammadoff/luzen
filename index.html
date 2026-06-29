@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luzen — Architecture & Interior Design Studio</title>
+  <meta name="description" content="Luzen is a premium architecture and interior design studio crafting environments where light, material, and form converge." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/editorial.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-logo">
+      <span>L</span><span>U</span><span>Z</span><span>E</span><span>N</span>
+    </div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <!-- ── Header ─────────────────────────────────────────────── -->
+  <header id="header">
+    <a href="index.html" class="header-logo">Luz<span>e</span>n</a>
+    <nav class="header-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a href="contact.html" class="header-contact-link">Get in touch</a>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <nav class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <span class="body-sm text-muted">© 2026 Luzen Studio</span>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="#" class="body-sm text-muted">Instagram</a>
+        <a href="#" class="body-sm text-muted">Behance</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       01  HERO — Asymmetric split. Title bottom-left.
+           Right side: image bleeds to viewport edge.
+           One headline word uses outline (text-stroke).
+  ═══════════════════════════════════════════════════════ -->
+  <section id="hero-slider" data-cursor="Drag" aria-label="Featured work">
+
+    <!-- Layered slides — each has a UNIQUE editorial composition -->
+    <div class="hs-stage">
+
+      <!-- 01 · Left-aligned · floating statistic card bottom-right -->
+      <article class="hs-slide hs-slide--left is-active" data-slide="0"
+        data-title="Spaces That Inspire" data-thumb="hero-bg.jpg">
+        <div class="hs-media"><img src="hero-bg.jpg" alt="Arched timber interior" style="object-position:center 42%;" /></div>
+        <div class="hs-shade"></div>
+        <div class="hs-vignette" aria-hidden="true"></div>
+        <div class="hs-content">
+          <div class="hs-text">
+            <span class="hs-eyebrow">Architecture &amp; Interior</span>
+            <h1 class="hs-title">Spaces That<br>Inspire</h1>
+            <p class="hs-desc">Two decades shaping light, material and form into environments that feel inevitable.</p>
+            <a href="projects.html" class="hs-cta magnetic"><span>Explore Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="hs-card hs-card--stat">
+            <span class="hs-card__num">148<i>+</i></span>
+            <span class="hs-card__label">Projects delivered<br>across 18 countries</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 · Centered · project-information card bottom-left -->
+      <article class="hs-slide hs-slide--center" data-slide="1"
+        data-title="Quiet Luxury" data-thumb="bg-05.jpg">
+        <div class="hs-media"><img src="bg-05.jpg" alt="Living room interior" style="object-position:center 55%;" /></div>
+        <div class="hs-shade"></div>
+        <div class="hs-vignette" aria-hidden="true"></div>
+        <div class="hs-content">
+          <div class="hs-text">
+            <span class="hs-eyebrow">Residential</span>
+            <h1 class="hs-title">Quiet<br>Luxury</h1>
+            <p class="hs-desc">A private residence where restraint and warmth meet above the Oslofjord.</p>
+            <a href="project-single.html" class="hs-cta magnetic"><span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="hs-card hs-card--info">
+            <span class="hs-card__cat">Meridian Residence</span>
+            <span class="hs-card__meta">Oslo, Norway</span>
+            <span class="hs-card__meta">Completed 2025 · 480m²</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 · Large type left · stacked thumbnail cards right -->
+      <article class="hs-slide hs-slide--large" data-slide="2"
+        data-title="Material Drama" data-thumb="bg-02.jpg">
+        <div class="hs-media"><img src="bg-02.jpg" alt="Dramatic dining interior" style="object-position:center 50%;" /></div>
+        <div class="hs-shade"></div>
+        <div class="hs-vignette" aria-hidden="true"></div>
+        <div class="hs-content">
+          <div class="hs-text">
+            <span class="hs-eyebrow">Interior Design</span>
+            <h1 class="hs-title">Material<br>Drama</h1>
+            <p class="hs-desc">Bold materiality and dramatic contrast, composed for a collector's loft.</p>
+            <a href="project-single.html" class="hs-cta magnetic"><span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div class="hs-thumbs">
+            <figure class="hs-thumb"><img src="pf3.webp" alt="" /><figcaption>Prism Gallery</figcaption></figure>
+            <figure class="hs-thumb"><img src="pf1.webp" alt="" /><figcaption>Velvet Studio</figcaption></figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 · Editorial split — text right, vertical rule, side label left -->
+      <article class="hs-slide hs-slide--split" data-slide="3"
+        data-title="Light Made Tangible" data-thumb="bg-04.jpg">
+        <div class="hs-media"><img src="bg-04.jpg" alt="Warm timber dining room" style="object-position:center 48%;" /></div>
+        <div class="hs-shade"></div>
+        <div class="hs-vignette" aria-hidden="true"></div>
+        <div class="hs-content">
+          <span class="hs-side-label" aria-hidden="true">Est. 2003 — Oslo</span>
+          <div class="hs-rule" aria-hidden="true"></div>
+          <div class="hs-text">
+            <span class="hs-eyebrow">Our Philosophy</span>
+            <h1 class="hs-title">Light Made<br>Tangible</h1>
+            <p class="hs-desc">Architecture measured not by how it photographs, but by how it feels to inhabit.</p>
+            <a href="about.html" class="hs-cta magnetic"><span>Our Philosophy</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Premium custom navigation -->
+    <div class="hs-nav">
+      <div class="hs-nav__controls">
+        <button class="hs-arrow hs-prev" aria-label="Previous slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        </button>
+        <button class="hs-arrow hs-next" aria-label="Next slide">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+
+      <div class="hs-nav__progress">
+        <span class="hs-num hs-num--cur">01</span>
+        <div class="hs-track"><div class="hs-track__fill"></div></div>
+        <span class="hs-num hs-num--tot">04</span>
+      </div>
+
+      <button class="hs-next-preview" aria-label="Go to next slide">
+        <span class="hs-next-preview__label">Up Next</span>
+        <span class="hs-next-preview__thumb"><img src="bg-05.jpg" alt="" /></span>
+        <span class="hs-next-preview__title">Quiet Luxury</span>
+      </button>
+    </div>
+
+    <div class="hs-scroll-hint">
+      <span class="hs-scroll-hint__line"></span>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       02  MARQUEE THIN — Minimal running text strip.
+  ═══════════════════════════════════════════════════════ -->
+  <div class="marquee-thin">
+    <div class="marquee-thin__track" id="mt-track">
+      <div class="marquee-thin__group">
+        <span class="marquee-thin__item">Architecture <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Interior Design <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Spatial Planning <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Landscape <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Selected Work 2003–2026 <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Oslo · Vienna · Porto <span class="sep">·</span></span>
+      </div>
+      <div class="marquee-thin__group" aria-hidden="true">
+        <span class="marquee-thin__item">Architecture <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Interior Design <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Spatial Planning <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Landscape <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Selected Work 2003–2026 <span class="sep">·</span></span>
+        <span class="marquee-thin__item">Oslo · Vienna · Porto <span class="sep">·</span></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       03  PROJECT BLEED — Full-width image composition.
+           No heading. Ghost number bottom-left.
+           Caption floats bottom-right.
+  ═══════════════════════════════════════════════════════ -->
+  <div class="project-bleed" data-cursor="View">
+    <a href="project-single.html">
+      <img class="project-bleed__img" src="work01.jpg" alt="Meridian Residence" />
+      <div class="project-bleed__overlay"></div>
+
+      <!-- Bleeding ghost number -->
+      <div class="project-bleed__num" aria-hidden="true">001</div>
+
+      <!-- Float caption -->
+      <div class="project-bleed__caption">
+        <span class="pbc-cat">Residential</span>
+        <span class="pbc-title">Meridian Residence</span>
+        <span class="pbc-meta">Oslo, Norway · 2025</span>
+      </div>
+
+      <!-- Left-edge indicator -->
+      <div class="project-bleed__indicator">
+        <div class="pbi-line"></div>
+        <span class="pbi-label">Featured Project</span>
+        <div class="pbi-line"></div>
+      </div>
+    </a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       04  ABOUT EDITORIAL — Asymmetric two-column.
+           Left: text with rotated label + ghost year.
+           Right: two overlapping images at different scales.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="about-editorial">
+
+    <div class="ae-left">
+      <span class="ae-left__vert-label">About Luzen</span>
+      <div class="ae-left__year" aria-hidden="true">2003</div>
+      <p class="ae-left__text">
+        We design environments that transcend the ordinary —
+        where light, material, and form converge into spaces
+        that feel both inevitable and deeply personal.
+      </p>
+      <p class="ae-left__text" style="font-size:0.9rem;line-height:1.7;margin-bottom:3rem;">
+        Founded in Oslo in 2003, Luzen Studio has spent two decades shaping
+        homes, cultural institutions, and commercial spaces across Europe.
+        Our approach begins with listening — then designing with intention.
+      </p>
+      <a href="about.html" class="ae-left__link">
+        Our story
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="ae-right">
+      <div class="ae-img-primary">
+        <img src="about-img1.jpg" alt="Luzen studio interior" />
+      </div>
+      <div class="ae-img-secondary">
+        <img src="about3.jpg" alt="Design process" />
+      </div>
+      <div class="ae-stat">
+        <span class="ae-stat__num"><span class="count-num" data-count="148">0</span><sup>+</sup></span>
+        <span class="ae-stat__label">Projects Completed</span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       05  COUNTER STRIP — Pure type. No images.
+           Numbers bleed slightly at edges.
+  ═══════════════════════════════════════════════════════ -->
+  <div class="counter-strip">
+    <div class="cs-intro">
+      <span class="cs-intro__eyebrow">By the Numbers</span>
+      <p class="cs-intro__text">Two decades of measured, deliberate practice — <em>quantified</em>.</p>
+    </div>
+    <div class="counter-strip__inner">
+      <div class="cs-item">
+        <span class="cs-num"><span class="count-num" data-count="148">0</span><sup>+</sup></span>
+        <span class="cs-label">Projects Delivered</span>
+      </div>
+      <div class="cs-item">
+        <span class="cs-num"><span class="count-num" data-count="22">0</span></span>
+        <span class="cs-label">Years Experience</span>
+      </div>
+      <div class="cs-item">
+        <span class="cs-num"><span class="count-num" data-count="34">0</span></span>
+        <span class="cs-label">Awards Won</span>
+      </div>
+      <div class="cs-item">
+        <span class="cs-num"><span class="count-num" data-count="18">0</span><sup>+</sup></span>
+        <span class="cs-label">Countries</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       06  SERVICES EDITORIAL — Vertical list.
+           Each item: number + large name + arrow.
+           Cursor-following preview image on hover.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="services-editorial">
+
+    <div class="se-header">
+      <div class="section-label">What We Do</div>
+      <a href="services.html" class="se-header-link">
+        All Services
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <ul class="service-list">
+      <li class="service-list__item" data-img="service-1.jpg">
+        <span class="sl-num">01</span>
+        <a href="services.html" class="sl-name">Architectural Design</a>
+        <p class="sl-desc">Concept to completion — buildings that respond to site, climate and culture.</p>
+        <span class="sl-tag">24 Projects</span>
+        <div class="sl-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </li>
+      <li class="service-list__item" data-img="service-2.jpg">
+        <span class="sl-num">02</span>
+        <a href="services.html" class="sl-name">Interior Design</a>
+        <p class="sl-desc">Material, light and proportion composed into spaces you feel before you see.</p>
+        <span class="sl-tag">38 Projects</span>
+        <div class="sl-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </li>
+      <li class="service-list__item" data-img="service-3.jpg">
+        <span class="sl-num">03</span>
+        <a href="services.html" class="sl-name">Spatial Planning</a>
+        <p class="sl-desc">Strategic use of every square metre — from master plan to circulation.</p>
+        <span class="sl-tag">19 Projects</span>
+        <div class="sl-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </li>
+      <li class="service-list__item" data-img="service_3.jpg">
+        <span class="sl-num">04</span>
+        <a href="services.html" class="sl-name">Renovation &amp; Restoration</a>
+        <p class="sl-desc">New life for existing structures, with respect for the history in their fabric.</p>
+        <span class="sl-tag">31 Projects</span>
+        <div class="sl-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </li>
+      <li class="service-list__item" data-img="service_4.jpg">
+        <span class="sl-num">05</span>
+        <a href="services.html" class="sl-name">Landscape Architecture</a>
+        <p class="sl-desc">The outdoor environment designed as a seamless extension of the building.</p>
+        <span class="sl-tag">16 Projects</span>
+        <div class="sl-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </li>
+      <li class="service-list__item" data-img="service_6.jpg">
+        <span class="sl-num">06</span>
+        <a href="services.html" class="sl-name">Design Consulting</a>
+        <p class="sl-desc">Expert guidance for developers and private clients at any project stage.</p>
+        <span class="sl-tag">20 Projects</span>
+        <div class="sl-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Cursor-following image (hidden on touch/mobile) -->
+    <div class="service-cursor-img" id="svc-preview" aria-hidden="true">
+      <img src="service-1.jpg" alt="" />
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       07  PHILOSOPHY STATEMENT — Near-empty composition.
+           Light background. Giant " bleeds top-left.
+           Quote text offset from center.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="philosophy-statement">
+    <span class="ps-deco" aria-hidden="true">&ldquo;</span>
+    <div class="ps-grid">
+
+      <div class="ps-text">
+        <div class="ps-eyebrow">Design Philosophy</div>
+        <blockquote class="ps-quote">
+          The measure of great architecture is how it feels to inhabit it on a Tuesday morning — <em>not</em> how it photographs from the outside.
+        </blockquote>
+        <cite class="ps-cite">— Luzen Studio Manifesto</cite>
+      </div>
+
+      <div class="ps-visual">
+        <div class="ps-img ps-img--back"><img src="about-img1.jpg" alt="Studio interior detail" /></div>
+        <div class="ps-img ps-img--front"><img src="about-img4.jpg" alt="Sculptural architecture at dusk" /></div>
+        <div class="ps-stat">
+          <span class="ps-stat__num">100<span>%</span></span>
+          <span class="ps-stat__label">Bespoke — every<br>project begins from zero.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       08  VIDEO — Full-bleed. "PLAY" text, not icon.
+           Rotated label on left edge.
+  ═══════════════════════════════════════════════════════ -->
+  <div class="video-editorial">
+    <div class="video-editorial__bg">
+      <img src="intro-video-image.jpg" alt="Luzen Studio Film" />
+    </div>
+    <div class="video-editorial__overlay"></div>
+
+    <span class="video-editorial__side-label">Studio Film · 2025</span>
+
+    <div class="video-editorial__play" id="video-play-btn"
+         data-video="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1">
+      <div class="ve-play-circle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </div>
+      <span class="ve-play-label">Watch Film</span>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       09  PROJECTS EDITORIAL GRID — NOT a uniform grid.
+           Row 1: 3 columns at 1.25fr / 0.85fr / 1.1fr.
+           Heights: 620 / 440 / 360.
+           Row 2: 2 items, offset with left padding.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="projects-editorial">
+
+    <div class="pe-header">
+      <h2>Selected<br>Work</h2>
+      <a href="projects.html">All Projects →</a>
+    </div>
+
+    <!-- Row 1 -->
+    <div class="pe-grid-1">
+      <article class="pe-item" data-cursor="View">
+        <a href="project-single.html">
+          <div class="pe-item__img pe-item--tall gl-hover">
+            <img src="work02.jpg" alt="Atlas Cultural Centre" />
+          </div>
+          <span class="pe-item__cat">Cultural</span>
+          <span class="pe-item__name">Atlas Cultural Centre</span>
+          <span class="pe-item__year">Vienna · 2024</span>
+        </a>
+      </article>
+
+      <article class="pe-item" data-cursor="View">
+        <a href="project-single.html">
+          <div class="pe-item__img pe-item--mid gl-hover">
+            <img src="project_1.jpg" alt="Holm Loft" />
+          </div>
+          <span class="pe-item__cat">Interior</span>
+          <span class="pe-item__name">Holm Loft</span>
+          <span class="pe-item__year">Stockholm · 2024</span>
+        </a>
+      </article>
+
+      <article class="pe-item" data-cursor="View">
+        <a href="project-single.html">
+          <div class="pe-item__img pe-item--short gl-hover">
+            <img src="work03.jpg" alt="Serra Villa" />
+          </div>
+          <span class="pe-item__cat">Residential</span>
+          <span class="pe-item__name">Serra Villa</span>
+          <span class="pe-item__year">Porto · 2023</span>
+        </a>
+      </article>
+    </div>
+
+    <!-- Row 2: offset grid break -->
+    <div class="pe-grid-2">
+      <article class="pe-item" data-cursor="View">
+        <a href="project-single.html">
+          <div class="pe-item__img pe-item--wide gl-hover">
+            <img src="project_2.jpg" alt="Noma Pavilion" />
+          </div>
+          <span class="pe-item__cat">Commercial</span>
+          <span class="pe-item__name">Noma Pavilion</span>
+          <span class="pe-item__year">Copenhagen · 2024</span>
+        </a>
+      </article>
+
+      <article class="pe-item" data-cursor="View">
+        <a href="project-single.html">
+          <div class="pe-item__img pe-item--wide gl-hover">
+            <img src="pf1.webp" alt="Velvet Studio" />
+          </div>
+          <span class="pe-item__cat">Interior</span>
+          <span class="pe-item__name">Velvet Studio</span>
+          <span class="pe-item__year">Stockholm · 2023</span>
+        </a>
+      </article>
+    </div>
+
+    <div class="pe-cta">
+      <a href="projects.html" class="btn-luzen magnetic">
+        <span>View All 148 Projects</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       10  TESTIMONIAL — One quote. Editorial.
+           Large italic quote text. Name secondary.
+           Giant " bleeds top-right.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="testimonial-editorial" id="client-stories">
+    <span class="te-deco" aria-hidden="true">&ldquo;</span>
+
+    <div class="te-eyebrow">Client Stories</div>
+
+    <div class="te-interactive">
+
+      <!-- Active testimonial (left) — content swapped by JS -->
+      <div class="te-active">
+        <div class="te-active__stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="te-active__quote">
+          Luzen transformed our vision into a home that feels both modern and deeply personal. The attention to light, material, and lived experience is extraordinary.
+        </blockquote>
+        <div class="te-active__author">
+          <img class="te-active__avatar" src="testimonial-1-1.jpg" alt="Emma Hartley" />
+          <div>
+            <span class="te-active__name">Emma Hartley</span>
+            <span class="te-active__role">Private Residence · Oslo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selectable list (right) — click to activate -->
+      <div class="te-list" role="tablist" aria-label="Client testimonials">
+        <button class="te-pick is-active" role="tab" aria-selected="true"
+          data-quote="Luzen transformed our vision into a home that feels both modern and deeply personal. The attention to light, material, and lived experience is extraordinary."
+          data-name="Emma Hartley" data-role="Private Residence · Oslo" data-img="testimonial-1-1.jpg">
+          <img src="testimonial-1-1.jpg" alt="" />
+          <span class="te-pick__body">
+            <span class="te-pick__name">Emma Hartley</span>
+            <span class="te-pick__role">Private Residence · Oslo</span>
+            <span class="te-pick__stars">★★★★★</span>
+          </span>
+          <span class="te-pick__bar"><i></i></span>
+        </button>
+
+        <button class="te-pick" role="tab" aria-selected="false"
+          data-quote="Working with Luzen on our cultural centre was genuinely collaborative. They brought ideas we hadn't dared to imagine — and delivered every one with precision."
+          data-name="Marcus Veld" data-role="Director, Vienna Arts Foundation" data-img="testimonial-1-2.jpg">
+          <img src="testimonial-1-2.jpg" alt="" />
+          <span class="te-pick__body">
+            <span class="te-pick__name">Marcus Veld</span>
+            <span class="te-pick__role">Director, Vienna Arts Foundation</span>
+            <span class="te-pick__stars">★★★★★</span>
+          </span>
+          <span class="te-pick__bar"><i></i></span>
+        </button>
+
+        <button class="te-pick" role="tab" aria-selected="false"
+          data-quote="The renovation exceeded every expectation. They understood the heritage of the building while making it entirely relevant for the way we live today."
+          data-name="Sofia Andrade" data-role="CEO, Andrade Property Group" data-img="testimonial-1-3.jpg">
+          <img src="testimonial-1-3.jpg" alt="" />
+          <span class="te-pick__body">
+            <span class="te-pick__name">Sofia Andrade</span>
+            <span class="te-pick__role">CEO, Andrade Property Group</span>
+            <span class="te-pick__stars">★★★★★</span>
+          </span>
+          <span class="te-pick__bar"><i></i></span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       11  JOURNAL EDITORIAL — Lead article: full-width
+           image with text overlay. Below: 2 items 3fr/2fr.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="journal-editorial">
+
+    <div class="je-header">
+      <div>
+        <span class="je-header__eyebrow">Journal</span>
+        <h2>Notes on<br>design &amp; craft</h2>
+      </div>
+      <a href="#" class="je-header__link">
+        All Articles
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="je-layout">
+
+      <!-- Featured article — tall portrait, full meta -->
+      <a href="#" class="je-feature" data-cursor="Read">
+        <div class="je-feature__img">
+          <img src="blog-1.webp" alt="The Future of Biophilic Design" />
+          <span class="je-feature__tag">Featured</span>
+        </div>
+        <div class="je-feature__body">
+          <div class="je-meta">
+            <span class="je-meta__cat">Architecture</span>
+            <span class="je-meta__dot"></span>
+            <span class="je-meta__date">June 12, 2025</span>
+            <span class="je-meta__dot"></span>
+            <span class="je-meta__read">8 min read</span>
+          </div>
+          <h3 class="je-feature__title">The Future of Biophilic Design in Urban Architecture</h3>
+          <p class="je-feature__excerpt">How integrating living systems into dense city fabric is reshaping the way we think about light, air, and the boundary between built and grown.</p>
+          <span class="je-feature__more">Read article
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Two supporting articles — landscape thumbs, stacked -->
+      <div class="je-side">
+        <a href="#" class="je-side__item" data-cursor="Read">
+          <div class="je-side__img">
+            <img src="blog-2.webp" alt="Material Honesty" />
+          </div>
+          <div class="je-side__body">
+            <div class="je-meta">
+              <span class="je-meta__cat">Interior</span>
+              <span class="je-meta__dot"></span>
+              <span class="je-meta__read">5 min read</span>
+            </div>
+            <h4 class="je-side__title">Material Honesty: Why Raw Surfaces Define the Decade</h4>
+            <span class="je-side__date">May 28, 2025</span>
+          </div>
+        </a>
+
+        <a href="#" class="je-side__item" data-cursor="Read">
+          <div class="je-side__img">
+            <img src="blog-3.webp" alt="Adaptive Reuse" />
+          </div>
+          <div class="je-side__body">
+            <div class="je-meta">
+              <span class="je-meta__cat">Sustainability</span>
+              <span class="je-meta__dot"></span>
+              <span class="je-meta__read">6 min read</span>
+            </div>
+            <h4 class="je-side__title">Adaptive Reuse: Architecture's Answer to the Climate Crisis</h4>
+            <span class="je-side__date">May 10, 2025</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       12  CLIENTS EDITORIAL — Light bg, logo grid.
+           No marquee. Sparse, typographic header.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="clients-editorial">
+    <div class="clients-editorial__head">
+      <h2 class="clients-editorial__title">
+        Working with the world's most ambitious builders.
+      </h2>
+      <div class="clients-editorial__aside">
+        <p class="clients-editorial__note">
+          From private residences to cultural institutions, our clients share a belief that extraordinary environments deserve extraordinary design.
+        </p>
+        <div class="clients-editorial__proof">
+          <span class="cp-num">98<span>%</span></span>
+          <span class="cp-text">of clients return for a second project</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two-row marquee · pause on hover · grayscale→color · faded edges -->
+    <div class="clients-marquee" id="clients-marquee">
+      <div class="cm-row" data-dir="1" data-speed="34">
+        <div class="cm-track">
+          <div class="cm-group">
+            <span class="cm-logo"><img src="brand-1.png" alt="Aurora Group" /></span>
+            <span class="cm-logo"><img src="brand-2.png" alt="Nordhaus" /></span>
+            <span class="cm-logo"><img src="brand-3.png" alt="Vela Estates" /></span>
+            <span class="cm-logo"><img src="brand-4.png" alt="Form Collective" /></span>
+            <span class="cm-logo"><img src="brand-5.png" alt="Meridian" /></span>
+            <span class="cm-logo"><img src="brand-10.png" alt="Atlas Foundation" /></span>
+            <span class="cm-logo"><img src="brand-03.png" alt="Stone & Oak" /></span>
+          </div>
+          <div class="cm-group" aria-hidden="true">
+            <span class="cm-logo"><img src="brand-1.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-2.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-3.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-4.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-5.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-10.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-03.png" alt="" /></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cm-row" data-dir="-1" data-speed="28">
+        <div class="cm-track">
+          <div class="cm-group">
+            <span class="cm-logo"><img src="brand-04.png" alt="Lumen Partners" /></span>
+            <span class="cm-logo"><img src="brand-05.png" alt="Brutal Studio" /></span>
+            <span class="cm-logo"><img src="brand-6.webp" alt="Halden" /></span>
+            <span class="cm-logo"><img src="brand-7.webp" alt="Cstone" /></span>
+            <span class="cm-logo"><img src="brand-8.webp" alt="Northwind" /></span>
+            <span class="cm-logo"><img src="brand-9.webp" alt="Praxis" /></span>
+            <span class="cm-logo"><img src="brand-1.webp" alt="Studio Veld" /></span>
+          </div>
+          <div class="cm-group" aria-hidden="true">
+            <span class="cm-logo"><img src="brand-04.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-05.png" alt="" /></span>
+            <span class="cm-logo"><img src="brand-6.webp" alt="" /></span>
+            <span class="cm-logo"><img src="brand-7.webp" alt="" /></span>
+            <span class="cm-logo"><img src="brand-8.webp" alt="" /></span>
+            <span class="cm-logo"><img src="brand-9.webp" alt="" /></span>
+            <span class="cm-logo"><img src="brand-1.webp" alt="" /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       13  CTA EDITORIAL — Light section.
+           Email address IS the hero element.
+           Ghost "LUZEN" bleeds bottom-right.
+  ═══════════════════════════════════════════════════════ -->
+  <section class="cta-editorial">
+    <span class="cta-editorial__bg" aria-hidden="true">LUZEN</span>
+    <div class="cta-editorial__inner">
+      <div class="cta-editorial__eyebrow">Start a Conversation</div>
+      <a href="mailto:hello@luzen.studio" class="cta-editorial__email">
+        hello@luzen.studio
+      </a>
+      <p class="cta-editorial__sub">We respond to all enquiries within 48 hours.</p>
+    </div>
+  </section>
+
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer id="footer">
+
+    <div class="footer-marquee-strip">
+      <div class="footer-marquee-track">
+        <div class="footer-marquee-group">
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+          <span class="footer-marquee-item">Architecture · Interior · Landscape</span>
+          <span class="footer-marquee-item">Get In Touch →</span>
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+        </div>
+        <div class="footer-marquee-group" aria-hidden="true">
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+          <span class="footer-marquee-item">Architecture · Interior · Landscape</span>
+          <span class="footer-marquee-item">Get In Touch →</span>
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Watermark -->
+    <span class="footer-watermark" aria-hidden="true">LUZEN</span>
+
+    <div class="container" style="position:relative;z-index:1;">
+
+      <!-- Newsletter — the footer's actionable destination -->
+      <div class="footer-cta">
+        <div class="footer-cta__text">
+          <span class="footer-cta__eyebrow">The Studio Dispatch</span>
+          <h2 class="footer-cta__title">Design notes,<br>once a month.</h2>
+          <p class="footer-cta__sub">Project releases, studio thinking, and the occasional unbuilt idea — sent to a small, considered list.</p>
+        </div>
+        <form class="footer-news" onsubmit="return false;" novalidate>
+          <div class="footer-news__field">
+            <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+            <button type="submit" class="footer-news__btn magnetic" aria-label="Subscribe">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <span class="footer-news__note">No spam. Unsubscribe anytime.</span>
+        </form>
+      </div>
+
+      <!-- Social proof -->
+      <div class="footer-proof">
+        <span class="footer-proof__label">Recognised by</span>
+        <div class="footer-proof__list">
+          <span>Dezeen Awards</span>
+          <span>RIBA International</span>
+          <span>Wallpaper*</span>
+          <span>Frame Award</span>
+          <span>Nordic Built</span>
+        </div>
+      </div>
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">Luz<span>e</span>n</a>
+          <p class="footer-tagline">We design environments that transcend the ordinary — where light, material, and form converge into living art.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="TikTok">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Studio</a>
+            <a href="projects.html">Our Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <nav class="footer-links">
+            <a href="services.html">Architectural Design</a>
+            <a href="services.html">Interior Design</a>
+            <a href="services.html">Spatial Planning</a>
+            <a href="services.html">Renovation</a>
+            <a href="services.html">Landscape</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-item">
+            <span class="label">Email</span>
+            <a href="mailto:hello@luzen.studio" class="value">hello@luzen.studio</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="label">Phone</span>
+            <a href="tel:+4712345678" class="value">+47 123 456 78</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="label">Studio</span>
+            <span class="value">12 Aker Brygge, Oslo<br>Norway 0150</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Luzen Architecture Studio. All rights reserved.</p>
+        <nav class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/editorial.js"></script>
+  <script src="js/hero-slider.js"></script>
+</body>
+</html>

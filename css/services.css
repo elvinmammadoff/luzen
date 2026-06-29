@@ -1,0 +1,469 @@
+/* ============================================================
+   LUZEN — Services Page Premium Layer
+   Loaded after style.css on services.html only.
+   services.js owns all entrance choreography + accordion.
+   ============================================================ */
+
+
+/* ── Reveal system ───────────────────────────────────────────── */
+[data-rv] {
+  transition: opacity 1s var(--ease-out), transform 1.05s var(--ease-out),
+              clip-path 1.1s var(--ease-out);
+  will-change: opacity, transform;
+}
+body.rv-armed [data-rv]:not(.rv-in)         { opacity: 0; }
+body.rv-armed [data-rv].rv-up:not(.rv-in)   { transform: translateY(38px); }
+body.rv-armed [data-rv].rv-left:not(.rv-in) { transform: translateX(-28px); }
+[data-rv].rv-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-rv] { transition: none !important; }
+}
+
+
+/* ── 01 HERO ─────────────────────────────────────────────────── */
+.page-header {
+  height: 74vh;
+  min-height: 580px;
+  padding-bottom: 5.5rem;
+}
+
+.page-header-bg { overflow: hidden; }
+
+.page-header-bg img {
+  transform: scale(1.06);
+  object-position: center 42%;
+  will-change: transform;
+}
+
+.page-header-bg::after {
+  background:
+    linear-gradient(to bottom, rgba(12,12,12,0.25) 0%, rgba(12,12,12,0.15) 38%, rgba(12,12,12,0.84) 100%),
+    radial-gradient(110% 130% at 70% 65%, transparent 52%, rgba(0,0,0,0.36) 100%);
+}
+
+.page-header .breadcrumb a,
+.page-header .breadcrumb span {
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  color: rgba(245,242,237,0.42);
+}
+.page-header .breadcrumb .current { color: var(--accent); }
+
+.page-header-title {
+  font-size: clamp(4rem, 8.6vw, 7rem);
+  line-height: 0.96;
+  letter-spacing: -0.022em;
+}
+
+.page-header-sub {
+  margin-top: 1.75rem;
+  font-size: 0.93rem;
+  letter-spacing: 0.02em;
+  color: rgba(245,242,237,0.54);
+  max-width: 44ch;
+  line-height: 1.72;
+}
+
+
+/* ── 02 INTRODUCTION ─────────────────────────────────────────── */
+.svc-intro {
+  padding: 8rem 0 7rem;
+}
+
+.svc-intro__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.svc-intro__label { margin-bottom: 2rem; }
+
+.svc-intro__heading {
+  font-family: var(--f-display);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  color: var(--light);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.svc-intro__heading em { font-style: italic; color: var(--accent); }
+
+.svc-intro__col { padding-top: 0.5rem; }
+
+.svc-intro__p {
+  font-size: 1.05rem;
+  color: var(--muted-lt);
+  line-height: 1.88;
+}
+
+.svc-intro__p + .svc-intro__p { margin-top: 1.5rem; }
+
+
+/* ── 03 ACCORDION ────────────────────────────────────────────── */
+.svc-accordion-section { padding-bottom: 9rem; }
+
+.services-accordion {
+  border: 1px solid var(--border);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  transition: background 0.55s var(--ease-out);
+}
+
+.accordion-item:last-child { border-bottom: none; }
+
+/* Gold top hairline that sweeps in on hover / open */
+.accordion-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.6s var(--ease-out);
+  z-index: 1;
+}
+
+.accordion-item:hover::before,
+.accordion-item.is-open::before { width: 100%; }
+
+.accordion-item.is-open { background: var(--surface); }
+
+/* Header row */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.75rem 3rem;
+  cursor: none;
+  transition: background 0.35s ease, padding-left 0.45s var(--ease-out);
+  position: relative;
+  gap: 2rem;
+}
+
+.accordion-item.is-open .accordion-header { padding-left: 3rem; }
+
+.accordion-header:hover { background: rgba(255,255,255,0.018); }
+
+.accordion-header-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.accordion-num {
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--accent);
+  opacity: 0.45;
+  flex-shrink: 0;
+  transition: opacity 0.4s ease;
+  letter-spacing: 0.05em;
+  min-width: 2.5rem;
+}
+
+.accordion-item.is-open .accordion-num,
+.accordion-header:hover .accordion-num { opacity: 1; }
+
+.accordion-title {
+  font-family: var(--f-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--light);
+  line-height: 1.15;
+  transition: color 0.35s ease;
+}
+
+.accordion-item.is-open .accordion-title,
+.accordion-header:hover .accordion-title { color: var(--accent-lt); }
+
+/* Toggle icon */
+.accordion-toggle {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 0.4s ease, background 0.4s ease;
+  position: relative;
+}
+
+/* Plus/minus via pseudo-elements — no text character */
+.accordion-toggle::before,
+.accordion-toggle::after {
+  content: '';
+  position: absolute;
+  background: var(--muted-lt);
+  border-radius: 1px;
+  transition: transform 0.45s var(--ease-out), opacity 0.35s ease, background 0.35s ease;
+}
+.accordion-toggle::before {
+  width: 14px; height: 1px;
+}
+.accordion-toggle::after {
+  width: 1px; height: 14px;
+}
+
+.accordion-item.is-open .accordion-toggle {
+  border-color: var(--accent);
+  background: rgba(202,160,92,0.08);
+}
+.accordion-item.is-open .accordion-toggle::before,
+.accordion-item.is-open .accordion-toggle::after {
+  background: var(--accent);
+}
+.accordion-item.is-open .accordion-toggle::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+/* Body */
+.accordion-body {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion-body-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  padding: 0 3rem 3.5rem;
+  align-items: start;
+}
+
+.accordion-body-text { padding-right: 1rem; }
+
+.accordion-body p {
+  font-size: 0.925rem;
+  color: var(--muted-lt);
+  line-height: 1.82;
+  margin-bottom: 1.1rem;
+}
+
+.accordion-body p:last-child { margin-bottom: 0; }
+
+/* Image within body */
+.accordion-body-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.accordion-body-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transform: scale(1.08);
+  transition: transform 0.9s var(--ease-out);
+  will-change: transform;
+}
+
+.accordion-body-img:hover img { transform: scale(1.03); }
+
+/* Clip-path entrance: image reveals left-to-right when body opens */
+.accordion-body-img.is-revealing {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.85s var(--ease-out);
+}
+
+.accordion-body-img.is-revealing.is-revealed {
+  clip-path: inset(0 0% 0 0);
+}
+
+
+/* ── 04 WHY CHOOSE US — warm light section ───────────────────── */
+.svc-why {
+  background: var(--light);
+  padding: 9rem 0 11rem;
+  position: relative;
+}
+
+/* Gold hairline marking the dark-to-light entry */
+.svc-why::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(202,160,92,0.38), transparent);
+}
+
+.svc-why__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 6rem;
+  align-items: center;
+}
+
+/* Image column */
+.svc-why__img-col { position: relative; }
+
+.svc-why__img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.svc-why__img-wrap img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  transform: scale(1.05);
+  will-change: transform;
+  transition: transform 0.9s var(--ease-out);
+}
+
+.svc-why__img-wrap:hover img { transform: scale(1.08); }
+
+/* Count badge — dark panel on ivory ground */
+.svc-why__badge {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  background: #191919;
+  border: 1px solid rgba(25,25,25,0.08);
+  padding: 1.75rem 2.25rem;
+  min-width: 170px;
+}
+
+.svc-why__badge-num {
+  font-family: var(--f-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.svc-why__badge-text {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(237,236,232,0.55);
+  margin-top: 0.4rem;
+}
+
+/* Text column */
+.svc-why__text { padding-left: 1rem; }
+
+.svc-why__label { margin-bottom: 1.75rem; }
+
+/* Section label on light ground — gold line + gold text stays fine */
+.svc-why .section-label { color: var(--accent); }
+.svc-why .section-label::before { background: var(--accent); }
+
+.svc-why__heading {
+  font-family: var(--f-display);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  color: #191919;
+  line-height: 1.12;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.svc-why__heading em { font-style: italic; color: var(--accent); }
+
+/* Differentiator list — tuned for ivory ground */
+.svc-diff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.svc-diff-item {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(25,25,25,0.1);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: padding-left 0.45s var(--ease-out), background 0.4s ease;
+  position: relative;
+  cursor: default;
+}
+
+.svc-diff-item:last-child { border-bottom: none; }
+
+/* Left gold hairline on hover */
+.svc-diff-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 25%;
+  width: 2px;
+  height: 0;
+  background: var(--accent);
+  transition: height 0.45s var(--ease-out);
+}
+
+.svc-diff-item:hover::before { height: 50%; }
+.svc-diff-item:hover {
+  padding-left: 0.75rem;
+  background: rgba(25,25,25,0.03);
+}
+
+.svc-diff-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.svc-diff-item:hover .svc-diff-icon { transform: scale(1.15); }
+
+.svc-diff-title {
+  font-family: var(--f-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #191919;
+  margin-bottom: 0.35rem;
+  transition: color 0.35s ease;
+  line-height: 1.2;
+}
+
+.svc-diff-item:hover .svc-diff-title { color: var(--accent); }
+
+.svc-diff-desc {
+  font-size: 0.875rem;
+  color: #59585D;
+  line-height: 1.72;
+}
+
+
+/* ── 05 CTA — uses shared .page-cta from style.css ───────────── */
+/* spacing override for section rhythm */
+.page-cta.section-sm { padding: 5.5rem 0; }
+
+/* Ivory-to-gold separator: a 1px shadow cast downward from the light section */
+.svc-why + .page-cta { box-shadow: inset 0 1px 0 rgba(202,160,92,0.25); }
+
+
+/* ── 06 RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .svc-intro__grid { grid-template-columns: 1fr; gap: 3rem; }
+  .svc-why__grid { grid-template-columns: 1fr; gap: 4rem; }
+  .svc-why__badge { right: 1rem; bottom: -1.5rem; }
+  .svc-why__text { padding-left: 0; }
+}
+
+@media (max-width: 768px) {
+  .page-header { height: 64vh; min-height: 460px; }
+  .page-header-sub { font-size: 0.88rem; }
+  .svc-intro { padding: 5rem 0 4rem; }
+  .accordion-header { padding: 2rem 1.5rem; gap: 1rem; }
+  .accordion-header-left { gap: 1.5rem; }
+  .accordion-body-inner { grid-template-columns: 1fr; gap: 2rem; padding: 0 1.5rem 2.5rem; }
+  .svc-why { padding: 6rem 0; }
+  .svc-why__img-wrap img { height: 380px; }
+  .svc-why__badge { display: none; }
+  .svc-diff-item:hover { padding-left: 0; background: none; }
+  .svc-diff-item::before { display: none; }
+}
