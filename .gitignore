@@ -2,3 +2,8 @@
 .claude/
 Thumbs.db
 *.swp
+node_modules/
+.sass-cache/
+*.css.map
+**/.DS_Store
+__MACOSX

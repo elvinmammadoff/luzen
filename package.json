@@ -1,0 +1,14 @@
+{
+  "name": "luzen",
+  "version": "1.0.0",
+  "description": "Luzen — Architecture & Interior Design HTML template. SCSS source compiles to assets/css.",
+  "private": true,
+  "scripts": {
+    "build:css": "sass assets/scss/main.scss:assets/css/main.css assets/scss/pages/_home.scss:assets/css/home.css assets/scss/pages/_about.scss:assets/css/about.css assets/scss/pages/_services.scss:assets/css/services.css assets/scss/pages/_projects.scss:assets/css/projects.css assets/scss/pages/_project-detail.scss:assets/css/project-detail.css assets/scss/pages/_contact.scss:assets/css/contact.css assets/scss/pages/_team-details.scss:assets/css/team-details.css --style=expanded --no-source-map",
+    "watch:css": "sass --watch assets/scss/main.scss:assets/css/main.css assets/scss/pages/_home.scss:assets/css/home.css assets/scss/pages/_about.scss:assets/css/about.css assets/scss/pages/_services.scss:assets/css/services.css assets/scss/pages/_projects.scss:assets/css/projects.css assets/scss/pages/_project-detail.scss:assets/css/project-detail.css assets/scss/pages/_contact.scss:assets/css/contact.css assets/scss/pages/_team-details.scss:assets/css/team-details.css --style=expanded --no-source-map",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}

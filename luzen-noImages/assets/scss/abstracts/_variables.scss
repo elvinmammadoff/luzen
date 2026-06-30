@@ -1,0 +1,59 @@
+// ============================================================
+// VARIABLES — sliced from main.css (source order preserved)
+// ============================================================
+
+/* ============================================================
+   LUZEN — Premium Architecture & Interior Design Template
+   ============================================================ */
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  /* ── Colors (Antra system) ────────────────────────────────── */
+  --dark:        #1C1C1D;
+  --surface:     #171719;
+  --surface-2:   #252627;
+  --dark-deep:   #100801;
+  --light:       #edece8;
+  --warm:        #edece8;
+  --accent:      #CAA05C;
+  --accent-lt:   #d9b87c;
+  --muted:       #4D4D52;
+  --muted-lt:    #9F9FA4;
+  --border:      rgba(255,255,255,0.07);
+  --border-lt:   rgba(0,0,0,0.12);
+
+  /* ── Typography (Antra system) ───────────────────────────── */
+  --f-display:   'Cal Sans', sans-serif;
+  --f-body:      'Golos Text', sans-serif;
+
+  /* ── Font size scale (Antra exact) ──────────────────────── */
+  --fs-h1:  clamp(2.8rem, 5.5vw, 5rem);
+  --fs-h2:  clamp(2.2rem, 4.5vw, 3.75rem);
+  --fs-h3:  clamp(1.8rem, 3.5vw, 3.125rem);
+  --fs-h4:  clamp(1.4rem, 2.5vw, 2.5rem);
+  --fs-h5:  clamp(1.1rem, 2vw, 1.875rem);
+  --fs-h6:  1.25rem;
+
+  /* ── Motion ──────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast:      0.25s ease;
+  --t-base:      0.45s var(--ease-out);
+  --t-slow:      0.85s var(--ease-out);
+}
+
+
+
+// ── SCSS variable mirror (for use in math/maps; CSS custom properties above remain the source of truth) ──
+$dark:        #1C1C1D;
+$surface:     #171719;
+$light:       #edece8;
+$accent:      #CAA05C;
+$accent-lt:   #d9b87c;
+$muted:       #4D4D52;
+$muted-lt:    #9F9FA4;
+
+$bp-lg: 1100px;
+$bp-md: 992px;
+$bp-sm: 768px;
+$bp-xs: 540px;

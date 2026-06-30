@@ -1,0 +1,24 @@
+// Mixins — reusable patterns found throughout the template
+// Provided for buyers; the compiled CSS already reflects these patterns.
+
+@mixin flex-center($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+}
+
+/// Fluid type between two viewport widths (matches the clamp() approach used in the CSS)
+@mixin fluid-type($min, $max, $vw: 5vw) {
+  font-size: clamp(#{$min}, #{$vw}, #{$max});
+}
+
+/// Breakpoint helper mirroring the template's max-width queries
+@mixin bp($w) {
+  @media (max-width: $w) { @content; }
+}

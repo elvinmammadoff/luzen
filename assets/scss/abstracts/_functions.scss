@@ -1,0 +1,15 @@
+// Functions — usable helpers for buyers extending the template
+@use 'sass:math';
+
+/// Strip the unit from a value: strip-unit(16px) => 16
+@function strip-unit($v) {
+  @if type-of($v) == 'number' and not unitless($v) {
+    @return math.div($v, ($v * 0 + 1));
+  }
+  @return $v;
+}
+
+/// px -> rem (assumes 16px root): rem(24) => 1.5rem
+@function rem($px, $base: 16) {
+  @return math.div(strip-unit($px), $base) * 1rem;
+}

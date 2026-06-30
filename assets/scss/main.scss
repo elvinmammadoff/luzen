@@ -1,0 +1,30 @@
+// ============================================================
+//  LUZEN — main.scss
+//  Compiles to assets/css/main.css (global stylesheet, every page).
+//  Page-specific partials in pages/ compile to their own files
+//  (assets/css/home.css, about.css, …) to preserve each page's
+//  unique scroll-reveal timing. See documentation > SCSS Structure.
+//  Build:  npm run build:css   (see package.json)
+// ============================================================
+
+// 1. Abstracts — tools only, emit no CSS
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base
+@import 'base/reset';
+@import 'base/global';
+@import 'base/typography';
+
+// 3. Components & Layout (source order preserved)
+@import 'components/buttons';
+@import 'layout/header';
+@import 'layout/grid';
+@import 'components/cards';
+@import 'layout/footer';
+@import 'components/accordion';
+@import 'components/forms';
+
+// 4. Utilities (helpers + responsive — imported last, as in source)
+@import 'utilities/helpers';

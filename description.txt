@@ -1,0 +1,70 @@
+============================================================
+LUZEN — Architecture & Interior Design HTML Template
+============================================================
+
+Luzen is a premium, GSAP-driven HTML template for architecture
+studios, interior designers and creative practices. It pairs a
+quiet, editorial visual language with cinematic motion — a
+cross-fading hero slider, a hand-built WebGL displacement hover,
+magnetic buttons and smooth Lenis scrolling — across a fully
+responsive, accessible 7-page layout.
+
+
+------------------------------------------------------------
+PAGES INCLUDED (7)
+------------------------------------------------------------
+- index.html ............ Home
+- about.html ............ About the studio
+- services.html ......... Services (accordion + why-us)
+- projects.html ......... Filterable projects grid
+- project-detail.html ... Single project case study
+- contact.html .......... Contact (Web3Forms, ready to use)
+- team-details.html ..... Team member profile
+
+
+------------------------------------------------------------
+FILES INCLUDED
+------------------------------------------------------------
+- 7 hand-coded HTML5 pages
+- SCSS source (7-1 architecture) + compiled CSS
+- Vanilla JavaScript (no jQuery) + local vendor bundle
+- assets/img organized by category (hero, projects, team, …)
+- Full favicon package (ICO, SVG, PNG, apple-touch, manifest)
+- luzen-noImages/ preview package (placeholder imagery)
+- documentation/ — complete buyer documentation
+
+
+------------------------------------------------------------
+KEY FEATURES
+------------------------------------------------------------
+- GSAP 3 + ScrollTrigger editorial reveals & counters
+- Lenis smooth scrolling
+- Custom WebGL displacement hover (Three.js)
+- Cross-fading hero slider with clip-path transitions
+- Working contact form via Web3Forms (no backend required)
+- Animated skill bars & metric counters
+- Magnetic buttons, custom cursor, film-grain texture
+- SCSS source with a clean 7-1 architecture
+- 100% responsive · accessible markup · no jQuery
+
+
+------------------------------------------------------------
+CREDITS
+------------------------------------------------------------
+- Fonts: Cal Sans, Golos Text (Google Fonts, OFL)
+- Libraries: GSAP 3.12.5, Lenis 1.1.13, Three.js r128,
+  Bootstrap 5.3.2 (grid only)
+- Forms: Web3Forms (web3forms.com)
+- Demo photography is for preview only and is NOT included
+  with the download. Replace with your own licensed imagery
+  (the luzen-noImages package ships with placeholders).
+
+
+------------------------------------------------------------
+CHANGELOG
+------------------------------------------------------------
+v1.0.0 — June 2026
+  - Initial release
+  - 7 pages, SCSS source, local vendor bundle
+  - Web3Forms contact form
+  - noImages preview package + full documentation

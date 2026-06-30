@@ -1,0 +1,196 @@
+// ============================================================
+// GLOBAL — sliced from main.css (source order preserved)
+// ============================================================
+
+/* ── Film grain + vignette (the anti-"flat AI" texture layer) ── */
+body::before {
+  /* grain */
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9996;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+  animation: grain-shift 0.6s steps(2) infinite;
+}
+
+body::after {
+  /* vignette */
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9995;
+  pointer-events: none;
+  background: radial-gradient(120% 120% at 50% 40%, transparent 55%, rgba(0,0,0,0.35) 100%);
+}
+
+@keyframes grain-shift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-3%, 2%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+ul, ol { list-style: none; }
+button { cursor: none; border: none; background: none; font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+
+::selection { background: var(--accent); color: var(--dark); }
+
+/* ── Custom Cursor ──────────────────────────────────────────── */
+.cursor-dot,
+.cursor-circle {
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity var(--t-fast);
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+}
+
+.cursor-circle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(196, 167, 107, 0.5);
+  transition: width 0.3s var(--ease-out), height 0.3s var(--ease-out), opacity var(--t-fast);
+}
+
+.cursor-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-circle.is-hovering {
+  width: 64px;
+  height: 64px;
+  background: rgba(190, 155, 94, 0.08);
+  border-color: var(--accent);
+}
+
+/* contextual label inside cursor ("View", "Drag") */
+.cursor-circle.has-label {
+  width: 84px;
+  height: 84px;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.cursor-label {
+  font-family: var(--f-body);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--dark);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.25s ease, transform 0.25s var(--ease-out);
+  white-space: nowrap;
+}
+
+.cursor-circle.has-label .cursor-label { opacity: 1; transform: scale(1); }
+
+.cursor-circle.is-hidden,
+.cursor-dot.is-hidden { opacity: 0; }
+
+/* ── WebGL displacement hover container ─────────────────────── */
+.gl-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.gl-hover canvas {
+  display: block;
+}
+
+/* magnetic wrapper keeps GSAP transforms isolated */
+.magnetic { display: inline-flex; will-change: transform; }
+
+/* ── Preloader ──────────────────────────────────────────────── */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.preloader-logo {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.preloader-icon {
+  height: 36px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: preloader-icon-in 0.65s ease forwards 0.3s;
+}
+
+@keyframes preloader-icon-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.preloader-letters {
+  font-family: var(--f-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  color: var(--light);
+  text-transform: uppercase;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.preloader-letters span {
+  display: inline-block;
+  transform: translateY(100%);
+}
+
+.preloader-e { color: var(--accent); }
+
+.preloader-bar {
+  width: 120px;
+  height: 1px;
+  background: var(--surface-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.preloader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--accent);
+  animation: preload-bar 1.6s var(--ease-out) forwards;
+}
+
+@keyframes preload-bar {
+  to { left: 0; }
+}
+

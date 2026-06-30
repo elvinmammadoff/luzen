@@ -1,0 +1,91 @@
+// ============================================================
+// ACCORDION — sliced from main.css (source order preserved)
+// ============================================================
+
+/* ── Services Page ──────────────────────────────────────────── */
+.services-accordion { border: 1px solid var(--border); }
+
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-item:last-child { border-bottom: none; }
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 2.5rem;
+  cursor: none;
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover { background: var(--surface); }
+
+.accordion-header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.accordion-num {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  color: var(--accent);
+  opacity: 0.5;
+  min-width: 40px;
+}
+
+.accordion-title {
+  font-family: var(--f-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--light);
+}
+
+.accordion-toggle {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-item.is-open .accordion-toggle {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(45deg);
+}
+
+.accordion-body {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s var(--ease-out);
+}
+
+.accordion-body-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 2.5rem 3rem;
+}
+
+.accordion-body p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.accordion-body-img img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+

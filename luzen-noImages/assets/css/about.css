@@ -1,0 +1,586 @@
+/* ============================================================
+   LUZEN — About Page Premium Layer
+   Loaded after style.css on about.html ONLY.
+   Mirrors the homepage's editorial craft (same tokens, same
+   reveal system, same gold/dark luxury language) — never a new
+   design language. about.js owns the entrance choreography.
+   ============================================================ */
+
+
+/* ── Reveal system (IntersectionObserver-driven, fail-safe) ───
+   Identical to the homepage. Content is VISIBLE by default;
+   about.js adds body.rv-armed to opt elements into the hidden
+   state, then the observer (and a safety timer) add .rv-in.
+   If JS never runs, nothing stays hidden.
+   ────────────────────────────────────────────────────────────── */
+[data-rv] {
+  transition: opacity 1s var(--ease-out), transform 1.05s var(--ease-out),
+              clip-path 1.1s var(--ease-out);
+  will-change: opacity, transform;
+}
+body.rv-armed [data-rv]:not(.rv-in)          { opacity: 0; }
+body.rv-armed [data-rv].rv-up:not(.rv-in)    { transform: translateY(38px); }
+body.rv-armed [data-rv].rv-left:not(.rv-in)  { transform: translateX(-28px); }
+body.rv-armed [data-rv].rv-scale:not(.rv-in) { transform: scale(1.04); }
+[data-rv].rv-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-rv] { transition: none !important; }
+}
+
+
+/* ── 01 HERO (page-header) — cinematic, stronger hierarchy ───── */
+.page-header {
+  height: 74vh;
+  min-height: 580px;
+  padding-bottom: 5.5rem;
+}
+
+.page-header-bg { overflow: hidden; }
+
+.page-header-bg img {
+  transform: scale(1.06);          /* about.js drives the slow lifetime drift */
+  object-position: center 38%;
+  will-change: transform;
+}
+
+/* Deeper, layered grade — anchors the headline, adds corner depth */
+.page-header-bg::after {
+  background:
+    linear-gradient(to bottom, rgba(12,12,12,0.30) 0%, rgba(12,12,12,0.20) 42%, rgba(12,12,12,0.82) 100%),
+    radial-gradient(120% 130% at 30% 70%, transparent 55%, rgba(0,0,0,0.40) 100%);
+}
+
+.page-header-content { max-width: 1320px; }
+
+/* Breadcrumb — quieter, so the title carries the weight */
+.page-header .breadcrumb { margin-bottom: 1.75rem; }
+
+.page-header .breadcrumb a,
+.page-header .breadcrumb span {
+  font-size: 0.64rem;
+  letter-spacing: 0.2em;
+  color: rgba(245,242,237,0.42);
+}
+.page-header .breadcrumb .current { color: var(--accent); }
+.page-header .breadcrumb a { transition: color 0.3s var(--ease-out); }
+
+/* Stronger headline — ~112px ceiling, tighter tracking */
+.page-header-title {
+  font-size: clamp(4rem, 8.6vw, 7rem);
+  line-height: 0.96;
+  letter-spacing: -0.022em;
+}
+
+/* Supporting line under the title — adds hierarchy beneath the hero */
+.page-header-sub {
+  margin-top: 1.75rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  color: rgba(245,242,237,0.6);
+  max-width: 44ch;
+  line-height: 1.7;
+}
+
+
+/* ── 02 STORY (about-split) — editorial depth + float ────────── */
+.about-split-img-stack .img-primary,
+.about-split-img-stack .img-secondary {
+  transition: transform 0.7s var(--ease-out), box-shadow 0.7s var(--ease-out);
+  will-change: transform;
+}
+
+.about-split-img-stack .img-primary img,
+.about-split-img-stack .img-secondary img {
+  transition: transform 0.9s var(--ease-out);
+  will-change: transform;
+}
+
+/* Hover depth — the stack lifts and gains a soft architectural shadow */
+.about-split-img-stack:hover .img-primary {
+  transform: translateY(-6px);
+  box-shadow: 0 38px 70px -38px rgba(0,0,0,0.7);
+}
+.about-split-img-stack:hover .img-primary img { transform: scale(1.04); }
+
+.about-split-img-stack:hover .img-secondary {
+  box-shadow: 0 30px 60px -32px rgba(0,0,0,0.65);
+}
+
+/* Buttons match the homepage CTA language exactly */
+.about-split-text .btn-luzen { will-change: transform; }
+
+
+/* ── 03 BELIEFS (about-values) — refined entrance + hover ────── */
+.about-value-item {
+  transition: background 0.5s var(--ease-out), padding-left 0.5s var(--ease-out);
+  padding-left: 0;
+  position: relative;
+}
+
+/* gold left accent that scales in on hover */
+.about-value-item::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem; top: 50%;
+  width: 2px; height: 0;
+  background: var(--accent);
+  transform: translateY(-50%);
+  transition: height 0.5s var(--ease-out);
+}
+
+.about-value-item:hover::before { height: 60%; }
+.about-value-item:hover { padding-left: 1rem; }
+
+.about-value-num {
+  transition: opacity 0.45s var(--ease-out), color 0.45s var(--ease-out);
+}
+.about-value-item:hover .about-value-num { opacity: 1; }
+
+.about-value-title { transition: color 0.4s var(--ease-out); }
+.about-value-item:hover .about-value-title { color: var(--accent); }
+
+/* per-element entrance — number, title, desc reveal in sequence */
+.about-value-item .av-rv {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.about-value-item.rv-in .av-rv { opacity: 1; transform: none; }
+.about-value-item.rv-in .av-rv:nth-child(1) { transition-delay: 0.05s; }
+.about-value-item .av-rv-num {
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.about-value-item.rv-in .av-rv-num { opacity: 0.5; transform: none; }
+
+
+/* ── 04 BY THE NUMBERS (stats) — premium cards ───────────────── */
+.stats-section .stats-item {
+  transition: background 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out),
+              transform 0.5s var(--ease-out);
+}
+
+.stats-section .stats-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(202,160,92,0.10), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-out);
+  pointer-events: none;
+}
+
+.stats-section .stats-item:hover {
+  background: var(--surface);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px -36px rgba(0,0,0,0.7);
+}
+.stats-section .stats-item:hover::after { opacity: 1; }
+
+.stats-num sup { color: var(--accent); }
+
+
+/* ── 05 DESIGN PROCESS — premium cards ───────────────────────── */
+.process-step {
+  transition: background 0.5s var(--ease-out), transform 0.5s var(--ease-out),
+              box-shadow 0.5s var(--ease-out);
+}
+
+/* animated gold top border */
+.process-step::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s var(--ease-out);
+}
+
+.process-step:hover {
+  background: var(--surface);
+  transform: translateY(-8px);
+  box-shadow: 0 34px 60px -38px rgba(0,0,0,0.7);
+  z-index: 1;
+}
+.process-step:hover::after { transform: scaleX(1); }
+
+.process-step-num { transition: color 0.5s var(--ease-out), transform 0.6s var(--ease-out); }
+.process-step:hover .process-step-num {
+  color: rgba(202,160,92,0.4);
+  transform: translateY(-4px);
+}
+
+.process-step-title { transition: color 0.4s var(--ease-out); }
+.process-step:hover .process-step-title { color: var(--accent); }
+
+
+/* ── 06 TEAM — refined hover choreography ────────────────────── */
+.team-grid { gap: 2.5rem; }
+
+.team-card-img {
+  position: relative;
+}
+.team-card-img img {
+  height: 420px;                 /* consistent, taller editorial ratio */
+  transition: transform 0.9s var(--ease-out);
+}
+.team-card:hover .team-card-img img { transform: scale(1.06); }
+
+/* gradient scrim so names/socials read on any image */
+.team-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(12,12,12,0.55) 0%, transparent 42%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-out);
+  pointer-events: none;
+}
+.team-card:hover .team-card-img::after { opacity: 1; }
+
+/* Arrow reveal — corner affordance on hover (subtle, not a card overlay) */
+.team-card-arrow {
+  position: absolute;
+  bottom: 1.1rem;
+  right: 1.1rem;
+  width: 42px;
+  height: 42px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark);
+  opacity: 0;
+  transform: translate(8px, 8px) scale(0.85);
+  transition: opacity 0.45s var(--ease-out), transform 0.5s var(--ease-out);
+  z-index: 2;
+}
+.team-card-arrow svg { width: 15px; height: 15px; transition: transform 0.4s var(--ease-out); }
+.team-card:hover .team-card-arrow { opacity: 1; transform: translate(0, 0) scale(1); }
+.team-card:hover .team-card-arrow svg { transform: rotate(-45deg); }
+
+/* name + animated underline (text-width only) */
+.team-name {
+  display: inline-block;
+  position: relative;
+  transition: color 0.4s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.team-name::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -3px;
+  width: 100%; height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease-out);
+}
+.team-card:hover .team-name { color: var(--accent); transform: translateY(-2px); }
+.team-card:hover .team-name::after { transform: scaleX(1); }
+
+.team-role {
+  transition: color 0.4s var(--ease-out), opacity 0.4s var(--ease-out);
+  opacity: 0.85;
+}
+.team-card:hover .team-role { opacity: 1; }
+
+
+/* ── 07 AWARDS — timeline + press, real visual weight ────────── */
+.awards-section { background: var(--dark); }
+
+.awards-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.awards-lead {
+  font-size: 0.95rem;
+  color: var(--muted-lt);
+  line-height: 1.8;
+  max-width: 42ch;
+  margin-left: auto;
+}
+
+/* Timeline grid of award cards */
+.awards-timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.award-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2.6rem 2.4rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  transition: background 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+
+/* animated gold top hairline */
+.award-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.55s var(--ease-out);
+}
+
+.award-card:hover {
+  background: var(--surface);
+  transform: translateY(-4px);
+  z-index: 1;
+}
+.award-card:hover::after { transform: scaleX(1); }
+
+.award-year {
+  font-family: var(--f-display);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 0.9;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  transition: transform 0.5s var(--ease-out);
+}
+.award-card:hover .award-year { transform: translateY(-2px); }
+
+.award-name {
+  font-family: var(--f-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--light);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  transition: color 0.4s var(--ease-out);
+}
+.award-card:hover .award-name { color: var(--accent); }
+
+.award-detail {
+  font-size: 0.85rem;
+  color: var(--muted-lt);
+  line-height: 1.65;
+}
+
+/* Press / recognition logos — height-normalized like the homepage clients */
+.awards-press {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.awards-press__label {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-lt);
+  flex-shrink: 0;
+}
+
+.awards-press__logos {
+  display: flex;
+  align-items: center;
+  gap: 3.25rem;
+  flex-wrap: wrap;
+}
+
+.awards-press__logos img {
+  height: 30px;
+  max-width: 140px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.8);
+  opacity: 0.45;
+  transition: opacity 0.45s var(--ease-out), filter 0.45s var(--ease-out);
+}
+.awards-press__logos img:hover { filter: grayscale(0) brightness(1); opacity: 0.9; }
+
+
+/* ── 08 CTA — elevated gold band ─────────────────────────────── */
+.about-cta {
+  background: var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+/* slow diagonal sheen sweep */
+.about-cta__sheen {
+  position: absolute;
+  top: 0; left: -60%;
+  width: 40%; height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.18), transparent);
+  transform: skewX(-18deg);
+  animation: about-cta-sheen 7s var(--ease-out) infinite;
+  pointer-events: none;
+}
+
+@keyframes about-cta-sheen {
+  0%   { left: -60%; }
+  55%  { left: 130%; }
+  100% { left: 130%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-cta__sheen { animation: none; }
+}
+
+.about-cta__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.about-cta__eyebrow {
+  font-size: 0.66rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #6e4f1e;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+.about-cta__eyebrow::before {
+  content: '';
+  width: 30px; height: 1px;
+  background: #6e4f1e;
+}
+
+.about-cta__title {
+  font-family: var(--f-display);
+  font-size: clamp(1.9rem, 4vw, 3.4rem);
+  font-weight: 400;
+  color: var(--dark);
+  max-width: 22ch;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+.about-cta__title em { font-style: italic; color: #6e4f1e; }
+
+.about-cta .btn-luzen { will-change: transform; }
+
+
+/* ── 09 FOOTER — premium styles in style.css ─────────────────── */
+
+
+/* ── LIGHT SECTIONS — homepage dark/light editorial rhythm ─────
+   Warm ivory (--light #edece8), never pure white — same surface the
+   homepage uses for Philosophy / Clients / CTA. Every element is
+   re-tuned for a light ground (text, borders, hovers), so the section
+   reads as designed-for-light, not a recoloured dark block.
+   ────────────────────────────────────────────────────────────── */
+
+/* ── Our Philosophy — the page's breathing space ─────────────── */
+.about-philosophy {
+  background: var(--light);
+  padding-top: 11rem;      /* generous head room — heading never hugs the edge */
+  padding-bottom: 8rem;
+  position: relative;
+}
+
+/* faint gold hairline at the top edge — an intentional light-theme detail */
+.about-philosophy::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(202,160,92,0.35), transparent);
+}
+
+.about-philosophy .section-title { color: #191919; }
+.about-philosophy .section-title em { color: var(--accent); }
+
+/* Belief list — premium on a light ground */
+.about-philosophy .about-value-item {
+  border-bottom-color: rgba(25,25,25,0.1);
+  padding: 2rem 1.25rem;
+  border-radius: 2px;
+  transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out),
+              background 0.5s var(--ease-out);
+}
+.about-philosophy .about-value-item::before { left: 0; }
+
+.about-philosophy .about-value-item:hover {
+  padding-left: 1.25rem;                 /* neutralise the dark-theme indent */
+  transform: translateX(8px);
+  background: rgba(25,25,25,0.022);
+  box-shadow: 0 26px 50px -34px rgba(0,0,0,0.28);
+}
+
+.about-philosophy .about-value-title { color: #191919; }
+.about-philosophy .about-value-item:hover .about-value-title { color: var(--accent); }
+.about-philosophy .about-value-desc { color: #59585D; }
+.about-philosophy .about-value-num { color: var(--accent); }
+
+
+/* ── Team — light editorial spread ───────────────────────────── */
+.about-team {
+  background: var(--light);
+  position: relative;
+}
+
+.about-team::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(202,160,92,0.35), transparent);
+}
+
+.about-team .section-title { color: #191919; }
+.about-team .section-title em { color: var(--accent); }
+.about-team .row p { color: #59585D !important; }
+
+/* photographs sit on cards with a soft stone surround + shadow */
+.about-team .team-card-img {
+  box-shadow: 0 24px 48px -34px rgba(0,0,0,0.32);
+}
+
+.about-team .team-name { color: #191919; }
+.about-team .team-card:hover .team-name { color: var(--accent); }
+
+
+/* ── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .awards-head { grid-template-columns: 1fr; gap: 2rem; }
+  .awards-lead { margin-left: 0; }
+}
+
+@media (max-width: 768px) {
+  .page-header { height: 64vh; min-height: 460px; }
+  .page-header-sub { font-size: 0.88rem; }
+
+  .stats-section .stats-item:hover { transform: none; }
+
+  .awards-timeline { grid-template-columns: 1fr; }
+  .award-card { padding: 2rem 1.6rem; gap: 1.4rem; }
+  .award-year { font-size: 2rem; }
+
+  .awards-press { gap: 1.75rem; }
+  .awards-press__logos { gap: 2rem; }
+
+  .about-cta__inner { flex-direction: column; align-items: flex-start; }
+}

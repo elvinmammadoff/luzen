@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Luzen" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#1C1C1D" />
+  <title>Projects — Luzen Architecture Studio</title>
+  <meta name="description" content="Explore our portfolio of architecture and interior design projects across residential, commercial, and cultural categories." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/vendor.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/projects.css" />
+</head>
+<body>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-circle"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="header-logo"><img src="assets/img/logos/logo-mini-light.svg" alt="" aria-hidden="true" class="logo-icon" /><span class="logo-wm">Luz<span class="logo-e">e</span>n</span></a>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-right">
+      <a href="contact.html" class="header-contact-link">Get in touch</a>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu">
+    <nav class="mobile-menu-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <span class="body-sm text-muted">© 2026 Luzen Studio</span>
+    </div>
+  </div>
+
+  <!-- ── Page Hero ────────────────────────────────────────────── -->
+  <div class="page-header">
+    <div class="page-header-bg">
+      <img src="https://placehold.co/1648x1167" alt="Luzen Architecture — Portfolio" />
+    </div>
+    <div class="container page-header-content">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <span class="current">Projects</span>
+      </nav>
+      <h1 class="page-header-title">Our <em style="font-style:italic;color:var(--accent);">Work</em></h1>
+      <p class="page-header-sub">Twelve years of considered architecture — from private residences to cultural institutions across Europe.</p>
+    </div>
+  </div>
+
+  <!-- ── Projects Grid ─────────────────────────────────────────── -->
+  <section class="pj-section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="*" aria-pressed="true">
+          All <span class="filter-btn-count">12</span>
+        </button>
+        <button class="filter-btn" data-filter="residential" aria-pressed="false">
+          Residential <span class="filter-btn-count">3</span>
+        </button>
+        <button class="filter-btn" data-filter="interior" aria-pressed="false">
+          Interior <span class="filter-btn-count">3</span>
+        </button>
+        <button class="filter-btn" data-filter="commercial" aria-pressed="false">
+          Commercial <span class="filter-btn-count">2</span>
+        </button>
+        <button class="filter-btn" data-filter="cultural" aria-pressed="false">
+          Cultural <span class="filter-btn-count">2</span>
+        </button>
+        <button class="filter-btn" data-filter="landscape" aria-pressed="false">
+          Landscape <span class="filter-btn-count">2</span>
+        </button>
+      </div>
+
+      <!-- Grid -->
+      <div class="projects-filter-grid">
+
+        <div class="filter-card" data-category="residential" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Meridian Residence project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1920x1282" alt="Meridian Residence — Oslo, Norway" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Residential</span>
+              <h2 class="project-name">Meridian Residence</h2>
+              <span class="project-year">2025 — Oslo, Norway</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="cultural" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Atlas Cultural Centre project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1920x1166" alt="Atlas Cultural Centre — Vienna, Austria" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Cultural</span>
+              <h2 class="project-name">Atlas Cultural Centre</h2>
+              <span class="project-year">2024 — Vienna, Austria</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="interior" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Holm Loft project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1760x800" alt="Holm Loft — Stockholm, Sweden" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Interior</span>
+              <h2 class="project-name">Holm Loft</h2>
+              <span class="project-year">2024 — Stockholm, Sweden</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="commercial" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Noma Pavilion project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1760x800" alt="Noma Pavilion — Copenhagen, Denmark" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Commercial</span>
+              <h2 class="project-name">Noma Pavilion</h2>
+              <span class="project-year">2024 — Copenhagen, Denmark</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="residential" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Serra Villa project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1696x934" alt="Serra Villa — Porto, Portugal" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Residential</span>
+              <h2 class="project-name">Serra Villa</h2>
+              <span class="project-year">2023 — Porto, Portugal</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="interior" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Velvet Studio project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1400x680" alt="Velvet Studio — Stockholm, Sweden" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Interior</span>
+              <h2 class="project-name">Velvet Studio</h2>
+              <span class="project-year">2023 — Stockholm, Sweden</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="landscape" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Elm Garden project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1400x680" alt="Elm Garden — Bergen, Norway" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Landscape</span>
+              <h2 class="project-name">Elm Garden</h2>
+              <span class="project-year">2023 — Bergen, Norway</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="cultural" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Prism Gallery project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1400x680" alt="Prism Gallery — Amsterdam, Netherlands" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Cultural</span>
+              <h2 class="project-name">Prism Gallery</h2>
+              <span class="project-year">2022 — Amsterdam, Netherlands</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="residential" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Birch Villa project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1400x680" alt="Birch Villa — Helsinki, Finland" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Residential</span>
+              <h2 class="project-name">Birch Villa</h2>
+              <span class="project-year">2022 — Helsinki, Finland</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="commercial" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Silo Tower project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1760x800" alt="Silo Tower — Oslo, Norway" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Commercial</span>
+              <h2 class="project-name">Silo Tower</h2>
+              <span class="project-year">2022 — Oslo, Norway</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="interior" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Nordheim Penthouse project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1400x680" alt="Nordheim Penthouse — Oslo, Norway" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Interior</span>
+              <h2 class="project-name">Nordheim Penthouse</h2>
+              <span class="project-year">2021 — Oslo, Norway</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="filter-card" data-category="landscape" data-cursor="View">
+          <a href="project-detail.html" aria-label="View Coastal Park project">
+            <div class="filter-card-img">
+              <img src="https://placehold.co/1760x800" alt="Coastal Park — Stavanger, Norway" loading="lazy" />
+              <div class="filter-card-overlay"></div>
+              <div class="filter-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </div>
+            </div>
+            <div class="filter-card-info">
+              <span class="project-cat">Landscape</span>
+              <h2 class="project-name">Coastal Park</h2>
+              <span class="project-year">2021 — Stavanger, Norway</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA — shared gold accent band ────────────────────────── -->
+  <section class="section-sm page-cta">
+    <span class="page-cta__sheen" aria-hidden="true"></span>
+    <div class="container">
+      <div class="page-cta__inner">
+        <div>
+          <span class="page-cta__eyebrow">Start a Collaboration</span>
+          <h2 class="page-cta__title">Every great space begins with a <em>conversation.</em></h2>
+        </div>
+        <a href="contact.html" class="btn-luzen btn-luzen--dark magnetic">
+          <span>Get in Touch</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer — Full premium ─────────────────────────────────── -->
+  <footer id="footer">
+
+    <div class="footer-marquee-strip">
+      <div class="footer-marquee-track">
+        <div class="footer-marquee-group">
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+          <span class="footer-marquee-item">Architecture · Interior · Landscape</span>
+          <span class="footer-marquee-item">Get In Touch →</span>
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+        </div>
+        <div class="footer-marquee-group" aria-hidden="true">
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+          <span class="footer-marquee-item">Architecture · Interior · Landscape</span>
+          <span class="footer-marquee-item">Get In Touch →</span>
+          <span class="footer-marquee-item">Let's Build Something <span class="accent">Remarkable</span></span>
+        </div>
+      </div>
+    </div>
+
+    <span class="footer-watermark" aria-hidden="true">LUZEN</span>
+
+    <div class="container">
+
+      <div class="footer-cta">
+        <div class="footer-cta__text">
+          <span class="footer-cta__eyebrow">The Studio Dispatch</span>
+          <h2 class="footer-cta__title">Design notes,<br>once a month.</h2>
+          <p class="footer-cta__sub">Project releases, studio thinking, and the occasional unbuilt idea — sent to a small, considered list.</p>
+        </div>
+        <form class="footer-news" onsubmit="return false;" novalidate>
+          <div class="footer-news__field">
+            <input type="email" placeholder="your@email.com" aria-label="Email address" required />
+            <button type="submit" class="footer-news__btn magnetic" aria-label="Subscribe">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+          <span class="footer-news__note">No spam. Unsubscribe anytime.</span>
+        </form>
+      </div>
+
+      <div class="footer-proof">
+        <span class="footer-proof__label">Recognised by</span>
+        <div class="footer-proof__list">
+          <span>Dezeen Awards</span>
+          <span>RIBA International</span>
+          <span>Wallpaper*</span>
+          <span>Frame Award</span>
+          <span>Nordic Built</span>
+        </div>
+      </div>
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo"><img src="assets/img/logos/logo-mini-light.svg" alt="" aria-hidden="true" class="logo-icon" /><span class="logo-wm">Luz<span class="logo-e">e</span>n</span></a>
+          <p class="footer-tagline">We design environments that transcend the ordinary — where light, material, and form converge into living art.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="TikTok">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Navigation</h3>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Studio</a>
+            <a href="projects.html">Our Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Services</h3>
+          <nav class="footer-links">
+            <a href="services.html">Architectural Design</a>
+            <a href="services.html">Interior Design</a>
+            <a href="services.html">Spatial Planning</a>
+            <a href="services.html">Renovation</a>
+            <a href="services.html">Landscape</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Contact</h3>
+          <div class="footer-contact-item">
+            <span class="label">Email</span>
+            <a href="mailto:hello@luzen.studio" class="value">hello@luzen.studio</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="label">Phone</span>
+            <a href="tel:+4712345678" class="value">+47 123 456 78</a>
+          </div>
+          <div class="footer-contact-item">
+            <span class="label">Studio</span>
+            <span class="value">12 Aker Brygge, Oslo<br>Norway 0150</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Luzen Architecture Studio. All rights reserved.</p>
+        <nav class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/vendor.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/effects.js"></script>
+  <script src="assets/js/projects.js"></script>
+</body>
+</html>

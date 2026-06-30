@@ -1,0 +1,76 @@
+// ============================================================
+// BUTTONS — sliced from main.css (source order preserved)
+// ============================================================
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-luzen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--f-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--light);
+  padding: 1rem 2rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+  overflow: hidden;
+  transition: color var(--t-base);
+}
+
+.btn-luzen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.btn-luzen:hover::before { transform: scaleX(1); }
+.btn-luzen:hover { color: var(--dark); border-color: var(--accent); }
+.btn-luzen span { position: relative; z-index: 1; }
+.btn-luzen svg {
+  position: relative; z-index: 1; width: 16px; height: 16px;
+  transition: transform 0.45s var(--ease-out);
+}
+.btn-luzen:hover svg { transform: translateX(6px); }
+
+.btn-luzen--dark {
+  color: var(--dark);
+  border-color: rgba(0,0,0,0.2);
+}
+
+.btn-luzen--dark::before { background: var(--dark); }
+.btn-luzen--dark:hover { color: var(--light); border-color: var(--dark); }
+
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  position: relative;
+}
+
+.btn-text::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 100%; height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.btn-text:hover::after { transform: scaleX(1); transform-origin: left; }
+.btn-text svg { transition: transform 0.45s var(--ease-out); }
+.btn-text:hover svg { transform: translateX(6px); }
+
