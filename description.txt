@@ -1,70 +1,125 @@
-============================================================
-LUZEN — Architecture & Interior Design HTML Template
-============================================================
+<div class="user-html user-html__with-lazy-load"><h3 id="item-description__luzen-architecture-and-interior-design-html-template"><strong>Luzen — Architecture &amp; Interior Design HTML Template</strong></h3>
+<p><strong>Luzen</strong> is a premium, fully responsive HTML5 &amp; CSS3 template built for architecture studios, interior designers and creative practices. It ships with a <strong>7-page layout</strong> — Home, About, Services, Projects, Project Detail, Contact and Team Member — sharing one quiet, editorial design system and powered by GSAP + ScrollTrigger motion, a hand-built WebGL hover effect and Lenis smooth scrolling.
+<br><br>Looks great on all screen sizes and devices. Fully responsive, fast loading, and easy to customize without deep coding knowledge.</p>
 
-Luzen is a premium, GSAP-driven HTML template for architecture
-studios, interior designers and creative practices. It pairs a
-quiet, editorial visual language with cinematic motion — a
-cross-fading hero slider, a hand-built WebGL displacement hover,
-magnetic buttons and smooth Lenis scrolling — across a fully
-responsive, accessible 7-page layout.
+<h3 id="item-description__key-features">Key Features</h3>
+<ul>
+<li>7-page architecture &amp; interior design template on one shared design system</li>
+<li>GSAP + ScrollTrigger motion: cross-fading hero slider, scroll reveals, animated counters</li>
+<li>Custom WebGL displacement hover, hand-built with Three.js</li>
+<li>Web3Forms-powered contact form — no backend required</li>
+<li>Fully responsive design and fast loading across devices</li>
+</ul>
+<h3 id="item-description__why-choose-luzen">Why choose Luzen?</h3>
+<ul>
+<li>
+<strong>7-Page Architecture &amp; Interior Design Template</strong>
+<p>Home, About, Services, Projects, Project Detail, Contact and Team Member — seven pages sharing one cohesive editorial design system.</p>
+</li>
+<li>
+<strong>GSAP + ScrollTrigger Editorial Motion</strong>
+<p>A cross-fading hero slider with clip-path transitions, scroll-triggered section reveals, and animated metric counters &amp; skill bars — all GPU-accelerated.</p>
+</li>
+<li>
+<strong>Custom WebGL Displacement Hover</strong>
+<p>A hand-built Three.js shader hover effect for an extra layer of polish on imagery, with no third-party hover plugin.</p>
+</li>
+<li>
+<strong>Lenis Smooth Scrolling</strong>
+<p>Buttery, inertia-based page scrolling throughout the template.</p>
+</li>
+<li>
+<strong>Web3Forms Contact Form</strong>
+<p>The contact form submits directly via Web3Forms — no PHP or mail server needed. Includes honeypot spam protection and clear success/error messaging.</p>
+</li>
+<li>
+<strong>Magnetic Buttons &amp; Custom Cursor</strong>
+<p>Interactive magnetic button hovers and a custom cursor reinforce the studio's editorial feel across every page.</p>
+</li>
+<li>
+<strong>Easy Customization</strong>
+<p>SCSS source included with a clean 7-1 architecture and design tokens for colors, fonts and spacing.</p>
+</li>
+<li>
+<strong>Completely Responsive &amp; Accessible</strong>
+<p>Tested across five breakpoints (1200 / 1024 / 992 / 768 / 480px) with <code>prefers-reduced-motion</code> support built in.</p>
+</li>
+<li>
+<strong>Fast Loading Speed</strong>
+<p>No jQuery, no build step required to run, locally vendored libraries and no unnecessary dependencies.</p>
+</li>
+</ul>
 
+<h3 id="item-description__other-features">Other Features</h3>
+<ul>
+<li><strong>7 Pages</strong>: Home, About, Services, Projects, Project Detail, Contact, Team Member</li>
+<li>Animated skill bars &amp; metric counters on About, Projects, Home and Team Member pages</li>
+<li>Film-grain texture overlay for an editorial print feel</li>
+<li>Filterable projects grid</li>
+<li>Full favicon package (ICO, SVG, PNG, apple-touch-icon, web manifest)</li>
+<li>Validated HTML5, CSS3 — W3C valid code, 0 errors across every page</li>
+<li>Fast Page Load</li>
+<li>Mobile and Tablet Optimized</li>
+<li>Pixel Perfect Design</li>
+<li>Cross Browser compatibility</li>
+<li>Google Fonts</li>
+<li>Detailed Documentation (19 sections, included in the package)</li>
+<li>"No images" version included (<code>luzen-noImages/</code>), using <code>placehold.co</code> placeholder graphics at the exact dimensions of every demo image, so you can drop in your own photography immediately</li>
+</ul>
 
-------------------------------------------------------------
-PAGES INCLUDED (7)
-------------------------------------------------------------
-- index.html ............ Home
-- about.html ............ About the studio
-- services.html ......... Services (accordion + why-us)
-- projects.html ......... Filterable projects grid
-- project-detail.html ... Single project case study
-- contact.html .......... Contact (Web3Forms, ready to use)
-- team-details.html ..... Team member profile
+<h3 id="item-description__files-included">Files Included</h3>
+<ul>
+<li>HTML Files (7 pages + documentation, mirrored in both the full and "no images" packages)</li>
+<li>SCSS source files (7-1 architecture)</li>
+<li>Compiled CSS files</li>
+<li>JavaScript files (page-specific modules + a single local vendor bundle — no CDN script dependencies)</li>
+<li>Fonts loaded via Google Fonts CDN (no local font files)</li>
+<li>Documentation in HTML</li>
+</ul>
 
+<h3 id="item-description__3rd-party-libraries-used">3rd Party Libraries License</h3>
+<ul>
+<li>GSAP 3.12.5 + ScrollTrigger – <a href="https://gsap.com" rel="nofollow">GSAP</a></li>
+<li>Lenis 1.1.13 – <a href="https://lenis.darkroom.engineering" rel="nofollow">Lenis</a></li>
+<li>Three.js r128 – <a href="https://threejs.org" rel="nofollow">Three.js</a></li>
+<li>Bootstrap 5.3.2 Grid (grid system only) – <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a></li>
+<li>Web3Forms – <a href="https://web3forms.com" rel="nofollow">Web3Forms</a></li>
+</ul>
 
-------------------------------------------------------------
-FILES INCLUDED
-------------------------------------------------------------
-- 7 hand-coded HTML5 pages
-- SCSS source (7-1 architecture) + compiled CSS
-- Vanilla JavaScript (no jQuery) + local vendor bundle
-- assets/img organized by category (hero, projects, team, …)
-- Full favicon package (ICO, SVG, PNG, apple-touch, manifest)
-- luzen-noImages/ preview package (placeholder imagery)
-- documentation/ — complete buyer documentation
+<h3 id="item-description__fonts-used">Fonts used:</h3>
+<ul>
+<li><a href="https://fonts.google.com/specimen/Cal+Sans" rel="nofollow">Cal Sans</a> — display headlines</li>
+<li><a href="https://fonts.google.com/specimen/Golos+Text" rel="nofollow">Golos Text</a> — body text</li>
+</ul>
 
+<h3 id="item-description__images-license">Images License:</h3>
+<p>All images used in the demo are for preview purposes only and are <strong>not included</strong> in the final purchase files. The "no images" version ships with <code>placehold.co</code> placeholder graphics at matching dimensions instead.</p>
 
-------------------------------------------------------------
-KEY FEATURES
-------------------------------------------------------------
-- GSAP 3 + ScrollTrigger editorial reveals & counters
-- Lenis smooth scrolling
-- Custom WebGL displacement hover (Three.js)
-- Cross-fading hero slider with clip-path transitions
-- Working contact form via Web3Forms (no backend required)
-- Animated skill bars & metric counters
-- Magnetic buttons, custom cursor, film-grain texture
-- SCSS source with a clean 7-1 architecture
-- 100% responsive · accessible markup · no jQuery
+<h3 id="item-description__documentation">Documentation</h3>
+<a href="" rel="nofollow">Check the docs here</a>
+<p>Full step-by-step documentation is included in the <code>documentation/</code> folder of the download package — open <code>documentation/index.html</code> in your browser.</p>
 
+<h3 id="item-description__important-note">Important Note:</h3>
+<ul>
+<li>All images are used for preview only and are not part of the download package.</li>
+<li>Placeholder images at matching dimensions are provided in the "no images" package.</li>
+<li>The Contact form ships pre-wired to a demo Web3Forms access key for preview — replace it with your own free key before going live (covered in the documentation).</li>
+<li>Code customization and feature additions are outside item support scope per Envato policy.</li>
+</ul>
 
-------------------------------------------------------------
-CREDITS
-------------------------------------------------------------
-- Fonts: Cal Sans, Golos Text (Google Fonts, OFL)
-- Libraries: GSAP 3.12.5, Lenis 1.1.13, Three.js r128,
-  Bootstrap 5.3.2 (grid only)
-- Forms: Web3Forms (web3forms.com)
-- Demo photography is for preview only and is NOT included
-  with the download. Replace with your own licensed imagery
-  (the luzen-noImages package ships with placeholders).
-
-
-------------------------------------------------------------
-CHANGELOG
-------------------------------------------------------------
-v1.0.0 — June 2026
-  - Initial release
-  - 7 pages, SCSS source, local vendor bundle
-  - Web3Forms contact form
-  - noImages preview package + full documentation
+<h3 id="item-description__change-log">Change Log:</h3>
+<pre>June 2026: Luzen v1.0.0
+-----------------------------
+- Initial release
+- 7 pages: Home, About, Services, Projects, Project Detail, Contact, Team Member
+- GSAP 3 + ScrollTrigger editorial reveals, animated counters & skill bars
+- Custom WebGL displacement hover built with Three.js
+- Lenis smooth scrolling, magnetic buttons, custom cursor
+- SCSS source with a 7-1 architecture + compiled CSS
+- Web3Forms contact form, no backend required
+- Full favicon package (ICO, SVG, PNG, apple-touch-icon, manifest)
+- luzen-noImages/ preview package with placehold.co placeholders
+- Complete documentation (19 sections)
+- W3C-validated markup across all pages
+</pre>
+</div>
